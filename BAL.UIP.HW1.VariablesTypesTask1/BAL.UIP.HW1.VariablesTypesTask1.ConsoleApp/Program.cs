@@ -23,7 +23,6 @@ namespace BAL.UIP.HW1.VariablesTypesTask1.ConsoleApp
             Console.WriteLine("Rectangle square: " + rectangleSquare);
             Console.WriteLine("Rectangle perimeter: " + rectanglePerimeter);
             Console.WriteLine("\n");
-            //Console.ReadLine();
 
             // Task 2. Circle length; Circle square
             double circleRadius = 5;
@@ -62,15 +61,15 @@ namespace BAL.UIP.HW1.VariablesTypesTask1.ConsoleApp
             Console.WriteLine("Geometric mean of " + non_negative_numberA + " and " + non_negative_numberB + ": " + geometricMean);
             Console.WriteLine("\n");
 
-            // Task 5.
-            //double non_negative_numberA = 9;
-            //double non_negative_numberB = 16;
-            //double geometricMean;
+            // Task 5. Distance between two points
+            int point1 = -9;
+            int point2 = 11;
+            int distanceBetweenPoints;
 
-            //geometricMean = Math.Sqrt(non_negative_numberA * non_negative_numberB);
+            distanceBetweenPoints = point2 - point1;
 
             Console.WriteLine("Task 5");
-            Console.WriteLine("Not ready");
+            Console.WriteLine("Distance between points " + point1 + " and " + point2 + ": " + distanceBetweenPoints);
             Console.WriteLine("\n");
 
             // Task 6. Graph Rectangle square; Graph Rectangle perimeter
@@ -93,7 +92,7 @@ namespace BAL.UIP.HW1.VariablesTypesTask1.ConsoleApp
             Console.WriteLine("Graph Rectangle perimeter: " + graphRectanglePerimeter);
             Console.WriteLine("\n");
             
-            // Task 7. Values moving;
+            // Task 7. Values moving
             int variableA = 10;
             int variableB = 20;
             int variableC = 30;
