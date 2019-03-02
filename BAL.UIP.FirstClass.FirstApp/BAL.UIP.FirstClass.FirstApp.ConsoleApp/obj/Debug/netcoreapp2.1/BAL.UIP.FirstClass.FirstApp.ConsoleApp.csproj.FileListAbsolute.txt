@@ -9,3 +9,14 @@ D:\WorkDir\CSharpProjects\BAL.UIP.FirstClass.FirstApp\BAL.UIP.FirstClass.FirstAp
 D:\WorkDir\CSharpProjects\BAL.UIP.FirstClass.FirstApp\BAL.UIP.FirstClass.FirstApp.ConsoleApp\obj\Debug\netcoreapp2.1\BAL.UIP.FirstClass.FirstApp.ConsoleApp.AssemblyInfo.cs
 D:\WorkDir\CSharpProjects\BAL.UIP.FirstClass.FirstApp\BAL.UIP.FirstClass.FirstApp.ConsoleApp\obj\Debug\netcoreapp2.1\BAL.UIP.FirstClass.FirstApp.ConsoleApp.dll
 D:\WorkDir\CSharpProjects\BAL.UIP.FirstClass.FirstApp\BAL.UIP.FirstClass.FirstApp.ConsoleApp\obj\Debug\netcoreapp2.1\BAL.UIP.FirstClass.FirstApp.ConsoleApp.pdb
+D:\WorkDir\Study\CSharpProjects\BAL.UIP.FirstClass.FirstApp\BAL.UIP.FirstClass.FirstApp.ConsoleApp\bin\Debug\netcoreapp2.1\BAL.UIP.FirstClass.FirstApp.ConsoleApp.deps.json
+D:\WorkDir\Study\CSharpProjects\BAL.UIP.FirstClass.FirstApp\BAL.UIP.FirstClass.FirstApp.ConsoleApp\bin\Debug\netcoreapp2.1\BAL.UIP.FirstClass.FirstApp.ConsoleApp.runtimeconfig.json
+D:\WorkDir\Study\CSharpProjects\BAL.UIP.FirstClass.FirstApp\BAL.UIP.FirstClass.FirstApp.ConsoleApp\bin\Debug\netcoreapp2.1\BAL.UIP.FirstClass.FirstApp.ConsoleApp.runtimeconfig.dev.json
+D:\WorkDir\Study\CSharpProjects\BAL.UIP.FirstClass.FirstApp\BAL.UIP.FirstClass.FirstApp.ConsoleApp\bin\Debug\netcoreapp2.1\BAL.UIP.FirstClass.FirstApp.ConsoleApp.dll
+D:\WorkDir\Study\CSharpProjects\BAL.UIP.FirstClass.FirstApp\BAL.UIP.FirstClass.FirstApp.ConsoleApp\bin\Debug\netcoreapp2.1\BAL.UIP.FirstClass.FirstApp.ConsoleApp.pdb
+D:\WorkDir\Study\CSharpProjects\BAL.UIP.FirstClass.FirstApp\BAL.UIP.FirstClass.FirstApp.ConsoleApp\obj\Debug\netcoreapp2.1\BAL.UIP.FirstClass.FirstApp.ConsoleApp.csprojAssemblyReference.cache
+D:\WorkDir\Study\CSharpProjects\BAL.UIP.FirstClass.FirstApp\BAL.UIP.FirstClass.FirstApp.ConsoleApp\obj\Debug\netcoreapp2.1\BAL.UIP.FirstClass.FirstApp.ConsoleApp.csproj.CoreCompileInputs.cache
+D:\WorkDir\Study\CSharpProjects\BAL.UIP.FirstClass.FirstApp\BAL.UIP.FirstClass.FirstApp.ConsoleApp\obj\Debug\netcoreapp2.1\BAL.UIP.FirstClass.FirstApp.ConsoleApp.AssemblyInfoInputs.cache
+D:\WorkDir\Study\CSharpProjects\BAL.UIP.FirstClass.FirstApp\BAL.UIP.FirstClass.FirstApp.ConsoleApp\obj\Debug\netcoreapp2.1\BAL.UIP.FirstClass.FirstApp.ConsoleApp.AssemblyInfo.cs
+D:\WorkDir\Study\CSharpProjects\BAL.UIP.FirstClass.FirstApp\BAL.UIP.FirstClass.FirstApp.ConsoleApp\obj\Debug\netcoreapp2.1\BAL.UIP.FirstClass.FirstApp.ConsoleApp.dll
+D:\WorkDir\Study\CSharpProjects\BAL.UIP.FirstClass.FirstApp\BAL.UIP.FirstClass.FirstApp.ConsoleApp\obj\Debug\netcoreapp2.1\BAL.UIP.FirstClass.FirstApp.ConsoleApp.pdb

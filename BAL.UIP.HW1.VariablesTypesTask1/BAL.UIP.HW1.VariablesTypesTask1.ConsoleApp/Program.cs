@@ -13,11 +13,9 @@ namespace BAL.UIP.HW1.VariablesTypesTask1.ConsoleApp
             // Task 1. Rectangle square; Rectangle perimeter
             int rectangleSideA = 30;
             int rectangleSideB = 50;
-            int rectangleSquare;
-            int rectanglePerimeter;
-
-            rectangleSquare = rectangleSideA * rectangleSideB;
-            rectanglePerimeter = 2 * (rectangleSideA + rectangleSideB);
+            
+            int rectangleSquare = rectangleSideA * rectangleSideB;
+            int rectanglePerimeter = 2 * (rectangleSideA + rectangleSideB);
 
             Console.WriteLine("Task 1");
             Console.WriteLine("Rectangle square: " + rectangleSquare);
@@ -27,11 +25,9 @@ namespace BAL.UIP.HW1.VariablesTypesTask1.ConsoleApp
             // Task 2. Circle length; Circle square
             double circleRadius = 5;
             double pi = 3.14;
-            double circleLength;
-            double circleSquare;
-
-            circleLength = 2 * pi * circleRadius;
-            circleSquare = pi * circleRadius * circleRadius;
+            
+            double circleLength = 2 * pi * circleRadius;
+            double circleSquare = pi * circleRadius * circleRadius;
             //circleSquare = pi * Math.Pow(circleRadius, 2);
 
             Console.WriteLine("Task 2");
@@ -42,9 +38,8 @@ namespace BAL.UIP.HW1.VariablesTypesTask1.ConsoleApp
             // Task 3. Arithmetical mean
             double numberA = 192;
             double numberB = 439;
-            double arithmeticalMean;
 
-            arithmeticalMean = (numberA + numberB) / 2;
+            double arithmeticalMean = (numberA + numberB) / 2;
 
             Console.WriteLine("Task 3");
             Console.WriteLine("Arithmetical mean of " + numberA + " and " + numberB + ": " + arithmeticalMean);
@@ -53,9 +48,8 @@ namespace BAL.UIP.HW1.VariablesTypesTask1.ConsoleApp
             // Task 4. Geometric mean
             double nonNegativeNumberA = 9;
             double nonNegativeNumberB = 16;
-            double geometricMean;
-
-            geometricMean = Math.Sqrt(nonNegativeNumberA * nonNegativeNumberB);
+            
+            double geometricMean = Math.Sqrt(nonNegativeNumberA * nonNegativeNumberB);
 
             Console.WriteLine("Task 4");
             Console.WriteLine("Geometric mean of " + nonNegativeNumberA + " and " + nonNegativeNumberB + ": " + geometricMean);
@@ -64,9 +58,8 @@ namespace BAL.UIP.HW1.VariablesTypesTask1.ConsoleApp
             // Task 5. Distance between two points
             int point1 = -9;
             int point2 = 11;
-            int distanceBetweenPoints;
 
-            distanceBetweenPoints = point2 - point1;
+            int distanceBetweenPoints = point2 - point1;
 
             Console.WriteLine("Task 5");
             Console.WriteLine("Distance between points " + point1 + " and " + point2 + ": " + distanceBetweenPoints);
@@ -77,15 +70,11 @@ namespace BAL.UIP.HW1.VariablesTypesTask1.ConsoleApp
             int coordinateY1 = 3;
             int coordinateX2 = 10;
             int coordinateY2 = 6;
-            int graphRectangleSideA;
-            int graphRectangleSideB;
-            int graphRectangleSquare;
-            int graphRectanglePerimeter;
 
-            graphRectangleSideA = coordinateX2 - coordinateX1;
-            graphRectangleSideB = coordinateY2 - coordinateY1;
-            graphRectangleSquare = graphRectangleSideA * graphRectangleSideB;
-            graphRectanglePerimeter = 2 * (graphRectangleSideA + graphRectangleSideB);
+            int graphRectangleSideA = coordinateX2 - coordinateX1;
+            int graphRectangleSideB = coordinateY2 - coordinateY1;
+            int graphRectangleSquare = graphRectangleSideA * graphRectangleSideB;
+            int graphRectanglePerimeter = 2 * (graphRectangleSideA + graphRectangleSideB);
 
             Console.WriteLine("Task 6");
             Console.WriteLine("Graph Rectangle square: " + graphRectangleSquare);
@@ -96,12 +85,11 @@ namespace BAL.UIP.HW1.VariablesTypesTask1.ConsoleApp
             int variableA = 10;
             int variableB = 20;
             int variableC = 30;
-            int tempVariable;
-
+            
             Console.WriteLine("Task 6");
             Console.WriteLine("Initial variables values:\nA = " + variableA + ", B = " + variableB + " , C = " + variableC);
 
-            tempVariable = variableC;
+            int tempVariable = variableC;
             variableC = variableB;
             variableB = variableA;
             variableA = tempVariable;
