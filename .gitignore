@@ -1,0 +1,3 @@
+# ignore archives for reports
+*.7z
+*.zip 

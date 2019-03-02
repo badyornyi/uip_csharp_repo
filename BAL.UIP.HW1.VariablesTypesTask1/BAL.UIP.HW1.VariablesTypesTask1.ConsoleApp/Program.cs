@@ -51,14 +51,14 @@ namespace BAL.UIP.HW1.VariablesTypesTask1.ConsoleApp
             Console.WriteLine("\n");
 
             // Task 4. Geometric mean
-            double non_negative_numberA = 9;
-            double non_negative_numberB = 16;
+            double nonNegativeNumberA = 9;
+            double nonNegativeNumberB = 16;
             double geometricMean;
 
-            geometricMean = Math.Sqrt(non_negative_numberA * non_negative_numberB);
+            geometricMean = Math.Sqrt(nonNegativeNumberA * nonNegativeNumberB);
 
             Console.WriteLine("Task 4");
-            Console.WriteLine("Geometric mean of " + non_negative_numberA + " and " + non_negative_numberB + ": " + geometricMean);
+            Console.WriteLine("Geometric mean of " + nonNegativeNumberA + " and " + nonNegativeNumberB + ": " + geometricMean);
             Console.WriteLine("\n");
 
             // Task 5. Distance between two points
