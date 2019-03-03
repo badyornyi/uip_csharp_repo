@@ -1,7 +1,0 @@
-D:\WorkDir\Study\CSharpProjects\BAL.UIP.HW1.VariablesTypesTask1\BAL.UIP.HW1.VariablesTypesTask1.ConsoleApp\bin\Debug\BAL.UIP.HW1.VariablesTypesTask1.ConsoleApp.exe.config
-D:\WorkDir\Study\CSharpProjects\BAL.UIP.HW1.VariablesTypesTask1\BAL.UIP.HW1.VariablesTypesTask1.ConsoleApp\bin\Debug\BAL.UIP.HW1.VariablesTypesTask1.ConsoleApp.exe
-D:\WorkDir\Study\CSharpProjects\BAL.UIP.HW1.VariablesTypesTask1\BAL.UIP.HW1.VariablesTypesTask1.ConsoleApp\bin\Debug\BAL.UIP.HW1.VariablesTypesTask1.ConsoleApp.pdb
-D:\WorkDir\Study\CSharpProjects\BAL.UIP.HW1.VariablesTypesTask1\BAL.UIP.HW1.VariablesTypesTask1.ConsoleApp\obj\Debug\BAL.UIP.HW1.VariablesTypesTask1.ConsoleApp.csprojAssemblyReference.cache
-D:\WorkDir\Study\CSharpProjects\BAL.UIP.HW1.VariablesTypesTask1\BAL.UIP.HW1.VariablesTypesTask1.ConsoleApp\obj\Debug\BAL.UIP.HW1.VariablesTypesTask1.ConsoleApp.csproj.CoreCompileInputs.cache
-D:\WorkDir\Study\CSharpProjects\BAL.UIP.HW1.VariablesTypesTask1\BAL.UIP.HW1.VariablesTypesTask1.ConsoleApp\obj\Debug\BAL.UIP.HW1.VariablesTypesTask1.ConsoleApp.exe
-D:\WorkDir\Study\CSharpProjects\BAL.UIP.HW1.VariablesTypesTask1\BAL.UIP.HW1.VariablesTypesTask1.ConsoleApp\obj\Debug\BAL.UIP.HW1.VariablesTypesTask1.ConsoleApp.pdb
