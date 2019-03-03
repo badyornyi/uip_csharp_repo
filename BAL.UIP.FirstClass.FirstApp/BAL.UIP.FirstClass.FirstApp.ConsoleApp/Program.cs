@@ -6,35 +6,43 @@ namespace BAL.UIP.FirstClass.FirstApp.ConsoleApp
     {
         static void Main(string[] args)
         {
-            //int rectangleSideA = 30;
-            //int rectangleSideB = 40;
+            // Class 1: Data types
 
-            //int rectangleSquare = rectangleSideA * rectangleSideB;
-            //int rectanglePerimeter = 2 * rectangleSideA + 2 * rectangleSideB;
+            if (false)
+            {
+                int rectangleSideA = 30;
+                int rectangleSideB = 40;
 
-            //int i = 0;
-            //int i1 = i--;
-            //Console.WriteLine(i1);
-            //Console.WriteLine(i);
-            //int i2 = --i;
-            //Console.WriteLine(i2);
+                int rectangleSquare = rectangleSideA * rectangleSideB;
+                int rectanglePerimeter = 2 * rectangleSideA + 2 * rectangleSideB;
+
+                Console.WriteLine(rectangleSquare);
+                Console.WriteLine(rectanglePerimeter); 
+            }
+
+            if (false)
+            {
+                int i = 0;
+                int i1 = i--;
+                Console.WriteLine(i1);
+                Console.WriteLine(i);
+                int i2 = --i;
+                Console.WriteLine(i2);
+
+                Console.ReadLine(); 
+            }
+
+            if (false)
+            {
+                int personAge = 19;
+
+                bool isAlcoholSaleRestricted = personAge < 21;
+                Console.WriteLine("Alcohol sale restricted: " + isAlcoholSaleRestricted);
+                Console.ReadLine(); 
+            }
 
 
-
-            //Console.WriteLine(rectangleSquare);
-            //Console.WriteLine(rectanglePerimeter);
-            //Console.WriteLine(i1);
-            //Console.WriteLine(i2);
-            //Console.ReadLine();
-
-            //int personAge = 19;
-
-            //bool isAlcoholSaleRestricted = personAge < 21;
-            //Console.WriteLine("Alcohol sale restricted: " + isAlcoholSaleRestricted);
-            //Console.ReadLine();
-
-
-            // Class 2
+            // Class 2: if else
 
             if (false)
             {
@@ -114,7 +122,7 @@ namespace BAL.UIP.FirstClass.FirstApp.ConsoleApp
             }
 
 
-            // Class 3
+            // Class 3: Arrays, Cycles
 
             if (false)
             {
@@ -128,7 +136,7 @@ namespace BAL.UIP.FirstClass.FirstApp.ConsoleApp
             }
 
 
-            if (true)
+            if (false)
             {
                 int[][] jaggedArray = new int[][]
                     {
