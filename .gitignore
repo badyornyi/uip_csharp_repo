@@ -1,0 +1,7 @@
+# ignore archives for reports
+*.7z
+*.zip
+
+# ignore obj folders content
+BAL.UIP*/BAL.UIP*/obj/Debug/**
+BAL.UIP*/BAL.UIP*/bin/Debug/**
