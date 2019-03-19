@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace BAL.UIP.FirstClass.FirstApp.ConsoleApp
 {
@@ -17,7 +21,7 @@ namespace BAL.UIP.FirstClass.FirstApp.ConsoleApp
                 int rectanglePerimeter = 2 * rectangleSideA + 2 * rectangleSideB;
 
                 Console.WriteLine(rectangleSquare);
-                Console.WriteLine(rectanglePerimeter); 
+                Console.WriteLine(rectanglePerimeter);
             }
 
             if (false)
@@ -29,7 +33,7 @@ namespace BAL.UIP.FirstClass.FirstApp.ConsoleApp
                 int i2 = --i;
                 Console.WriteLine(i2);
 
-                Console.ReadLine(); 
+                Console.ReadLine();
             }
 
             if (false)
@@ -38,7 +42,7 @@ namespace BAL.UIP.FirstClass.FirstApp.ConsoleApp
 
                 bool isAlcoholSaleRestricted = personAge < 21;
                 Console.WriteLine("Alcohol sale restricted: " + isAlcoholSaleRestricted);
-                Console.ReadLine(); 
+                Console.ReadLine();
             }
 
 
@@ -102,7 +106,7 @@ namespace BAL.UIP.FirstClass.FirstApp.ConsoleApp
                         }
                 };
 
-                Console.ReadLine(); 
+                Console.ReadLine();
             }
 
             if (false)
@@ -118,7 +122,7 @@ namespace BAL.UIP.FirstClass.FirstApp.ConsoleApp
                 {
                     Console.WriteLine("Variable " + variableToConvert + " couldn't be converted to int32");
                 };
-                Console.ReadLine(); 
+                Console.ReadLine();
             }
 
 
@@ -132,7 +136,7 @@ namespace BAL.UIP.FirstClass.FirstApp.ConsoleApp
                 {
                     //Console.WriteLine("Array element '" + i + "' is: " + singleArray[i]);
                     Console.WriteLine($"Array element '{i}' is: {singleArray[i]}");
-                } 
+                }
             }
 
             if (false)
@@ -150,7 +154,7 @@ namespace BAL.UIP.FirstClass.FirstApp.ConsoleApp
                     {
                         Console.WriteLine($"Array's array element [{i};{j}] value is: {jaggedArray[i][j]}");
                     }
-                }; 
+                };
             }
 
             if (false)
@@ -233,7 +237,7 @@ namespace BAL.UIP.FirstClass.FirstApp.ConsoleApp
                 Console.WriteLine("How many numbers you want to put?");
                 int valueFromUser = GetNumberFromUserWithDesiredRange(1, 10);
                 int[] arrayValuesFromUser = new int[valueFromUser];
-                for (int i = 0; i < valueFromUser ; i++)
+                for (int i = 0; i < valueFromUser; i++)
                 {
                     arrayValuesFromUser[i] = GetNumberFromUserWithDesiredRange(100, 1000);
                 }
@@ -379,7 +383,7 @@ namespace BAL.UIP.FirstClass.FirstApp.ConsoleApp
             //foreach (string eachValue in arrayValuesFromUser)
             for (int i = 0; i < array.Length; i++)
             {
-                string printText = isPrintIndex ? $"[{i+1}]{array[i]}" : $"{array[i]}";
+                string printText = isPrintIndex ? $"[{i + 1}]{array[i]}" : $"{array[i]}";
 
                 if (isWriteOnNewLine)
                 {
