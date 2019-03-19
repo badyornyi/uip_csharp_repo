@@ -80,7 +80,7 @@ namespace BAL.UIP.HW2.ConditionsArraysLoops.ConsoleApp
                 int taskFiveVariableA = randomizer.Next(-50, 50);
                 int taskFiveVariableB = randomizer.Next(-50, 50);
                 int taskFiveVariableC = randomizer.Next(-50, 50);
-                bool isOnlyOneNumberPositive;
+                bool isOnlyOneNumberPositive = false;
 
                 isOnlyOneNumberPositive = (taskFiveVariableA > 0) ^ (taskFiveVariableB > 0) ^ (taskFiveVariableC > 0);
 
@@ -150,16 +150,11 @@ namespace BAL.UIP.HW2.ConditionsArraysLoops.ConsoleApp
                 int triangleSideC = randomizer.Next(1, 50);
                 bool isTriangleExists = false;
 
-                if (triangleSideA + triangleSideB > triangleSideC)
-                {
-                    if (triangleSideB + triangleSideC > triangleSideA)
-                    {
-                        if (triangleSideA + triangleSideC > triangleSideB)
-                        {
-                            isTriangleExists = true;
-                        }
-                    }
-                }
+                bool isABSumLessC = triangleSideA + triangleSideB > triangleSideC;
+                bool isBCSumLessA = triangleSideB + triangleSideC > triangleSideA;
+                bool isACSumLessB = triangleSideA + triangleSideC > triangleSideB;
+
+                isTriangleExists = isABSumLessC && isBCSumLessA && isACSumLessB;
 
                 Console.WriteLine("Task 8");
                 Console.WriteLine(
