@@ -22,24 +22,16 @@ namespace BAL.UIP.HW3.ArraysLoopsConditionalsMethods.ConsoleApp
                 int taskOneVariableOne = randomizer.Next(-50, 49);
                 int taskOneVariableTwo = GetBiggerSecondNumber(taskOneVariableOne);
                 
-                int taskOneNumberOfNumbers = GetNumberOfNumbersInRangeIncluding(taskOneVariableOne, taskOneVariableTwo);
+                int taskOneCountOfNumbers = GetCountOfNumbersInRangeIncluding(taskOneVariableOne, taskOneVariableTwo);
 
-                int[] taskOneAllNumbersInRange = new int[taskOneNumberOfNumbers];
+                int[] taskOneAllNumbersInRange = GetAllNumbersInRangeIncreasing(taskOneCountOfNumbers, taskOneVariableOne);
 
-                taskOneAllNumbersInRange = GetAllNumbersInRangeIncreasing(taskOneNumberOfNumbers, taskOneVariableOne);
-
-                Console.WriteLine($"Number of numbers between {taskOneVariableOne} and {taskOneVariableTwo} (including): {taskOneNumberOfNumbers}");
+                Console.WriteLine($"Number of numbers between {taskOneVariableOne} and {taskOneVariableTwo} (including): {taskOneCountOfNumbers}");
                 Console.Write($"Numbers between {taskOneVariableOne} and {taskOneVariableTwo} (increasing): ");
                 foreach (int number in taskOneAllNumbersInRange)
                 {
-                    if (number != taskOneVariableTwo)
-                    {
-                        Console.Write($"{number}, ");
-                    }
-                    else
-                    {
-                        Console.Write($"{number}");
-                    }
+                    string result = (number != taskOneVariableTwo) ? $"{number}, " : $"{number}";
+                    Console.Write(result);
                 }
                 Console.WriteLine("\n\n");
             }
@@ -55,26 +47,19 @@ namespace BAL.UIP.HW3.ArraysLoopsConditionalsMethods.ConsoleApp
                 int taskTwoVariableOne = randomizer.Next(-50, 49);
                 int taskTwoVariableTwo = GetBiggerSecondNumber(taskTwoVariableOne);
 
-                int taskTwoNumberOfNumbers = GetNumberOfNumbersInRangeExcluding(taskTwoVariableOne, taskTwoVariableTwo);
+                int taskTwoCountOfNumbers = GetCountOfNumbersInRangeExcluding(taskTwoVariableOne, taskTwoVariableTwo);
 
-                int[] taskTwoAllNumbersInRange = new int[taskTwoNumberOfNumbers];
+                int[] taskTwoAllNumbersInRange = GetAllNumbersInRangeDecreasing(taskTwoCountOfNumbers, taskTwoVariableTwo);
 
-                taskTwoAllNumbersInRange = GetAllNumbersInRangeDecreasing(taskTwoNumberOfNumbers, taskTwoVariableTwo);
-
-                Console.WriteLine($"Number of numbers between {taskTwoVariableOne} and {taskTwoVariableTwo} (excluding): {taskTwoNumberOfNumbers}");
-                if (taskTwoNumberOfNumbers != 0)
+                Console.WriteLine($"Number of numbers between {taskTwoVariableOne} and {taskTwoVariableTwo} (excluding): {taskTwoCountOfNumbers}");
+                if (taskTwoCountOfNumbers != 0)
                 {
                     Console.Write($"Numbers between {taskTwoVariableOne} and {taskTwoVariableTwo} (decreasing): ");
+                    int taskTwoVariableOneNext = taskTwoVariableOne + 1;
                     foreach (int number in taskTwoAllNumbersInRange)
                     {
-                        if (number != taskTwoVariableOne+1)
-                        {
-                            Console.Write($"{number}, ");
-                        }
-                        else
-                        {
-                            Console.Write($"{number}");
-                        }
+                        string result = (number != taskTwoVariableOneNext) ? $"{number}, " : $"{number}";
+                        Console.Write(result);
                     }
                 }
                 Console.WriteLine("\n\n");
@@ -91,13 +76,13 @@ namespace BAL.UIP.HW3.ArraysLoopsConditionalsMethods.ConsoleApp
                 Console.WriteLine("Task 3.");
                 int startMoneyAmount = 1000;
                 double increasingValue = randomizer.Next(1, 25);
-                double monthlyPercents = increasingValue / 100;
+                double monthlyPercents = increasingValue / 100 + 1.0;
                 int totalMonthes = 0;
                 double totalMoneyAmount = startMoneyAmount;
 
                 while (totalMoneyAmount <= 1100)
                 {
-                    totalMoneyAmount = totalMoneyAmount + totalMoneyAmount * monthlyPercents;
+                    totalMoneyAmount = totalMoneyAmount * monthlyPercents;
                     totalMonthes++;
                 }
 
@@ -114,24 +99,17 @@ namespace BAL.UIP.HW3.ArraysLoopsConditionalsMethods.ConsoleApp
             {
                 Console.WriteLine("Task 4.");
                 int taskFourVariableN = randomizer.Next(1, 50);
-                int[] taskFourOddNumbers = new int[taskFourVariableN];
-
-                taskFourOddNumbers = GetNFirstPositiveOddNumbers(taskFourVariableN);
+                
+                int[] taskFourOddNumbers = GetNFirstPositiveOddNumbers(taskFourVariableN);
                 
                 Console.Write($"{taskFourVariableN} first positive odd numbers are: ");
+                int taskFourOddNumbersLastIndex = taskFourOddNumbers.Length - 1;
                 for (int i = 0; i < taskFourOddNumbers.Length; i++)
                 {
-                    if (i != taskFourOddNumbers.Length - 1)
-                    {
-                        Console.Write($"{taskFourOddNumbers[i]}, ");
-                    }
-                    else
-                    {
-                        Console.Write($"{taskFourOddNumbers[i]}");
-                    }
+                    string result = (i != taskFourOddNumbersLastIndex) ? $"{taskFourOddNumbers[i]}, " : $"{taskFourOddNumbers[i]}";
+                    Console.Write(result);
                 }
                 Console.WriteLine("\n\n");
-
             }
 
 
@@ -141,21 +119,14 @@ namespace BAL.UIP.HW3.ArraysLoopsConditionalsMethods.ConsoleApp
             {
                 Console.WriteLine("Task 5.");
                 int taskFiveVariableN = randomizer.Next(1, 50);
-                int[] taskFiveRandomNumbersArray = new int[taskFiveVariableN];
-
-                taskFiveRandomNumbersArray = GetRandomNumbersArray(taskFiveVariableN, -50, 50);
+                
+                int[] taskFiveRandomNumbersArray = GetRandomNumbersArray(taskFiveVariableN, -50, 50);
 
                 Console.Write($"{taskFiveVariableN} array elements in reversal view are: ");
                 for (int i = taskFiveRandomNumbersArray.Length - 1; i >= 0; i--)
                 {
-                    if (i != 0)
-                    {
-                        Console.Write($"{taskFiveRandomNumbersArray[i]}, ");
-                    }
-                    else
-                    {
-                        Console.Write($"{taskFiveRandomNumbersArray[i]}");
-                    }
+                    string result = (i != 0) ? $"{taskFiveRandomNumbersArray[i]}, " : $"{taskFiveRandomNumbersArray[i]}";
+                    Console.Write(result);
                 }
                 Console.WriteLine("\n\n");
             }
@@ -169,43 +140,31 @@ namespace BAL.UIP.HW3.ArraysLoopsConditionalsMethods.ConsoleApp
             {
                 Console.WriteLine("Task 6.");
                 int taskSixVariableN = randomizer.Next(1, 50);
-                int[] taskSixRandomNumbersArray = new int[taskSixVariableN];
                 int evenNumbersQuantity = 0;
                 int oddNumbersQuantity = 0;
 
-                taskSixRandomNumbersArray = GetRandomNumbersArray(taskSixVariableN, -50, 50);
+                int[] taskSixRandomNumbersArray = GetRandomNumbersArray(taskSixVariableN, -50, 50);
 
                 Console.WriteLine($"Total size of Array: {taskSixRandomNumbersArray.Length}\n");
                 Console.WriteLine($"Even numbers from Array in incremental order of indexes: ");
+                int taskSixRandomNumbersArrayLastIndex = taskSixRandomNumbersArray.Length - 1;
                 for (int i = 0; i < taskSixRandomNumbersArray.Length; i++)
                 {
                     if (taskSixRandomNumbersArray[i] % 2 == 0)
                     {
-                        if (i != taskSixRandomNumbersArray.Length - 1)
-                        {
-                            Console.Write($"{taskSixRandomNumbersArray[i]}, ");
-                        }
-                        else
-                        {
-                            Console.Write($"{taskSixRandomNumbersArray[i]}");
-                        }
+                        string result = (i != taskSixRandomNumbersArrayLastIndex) ? $"{taskSixRandomNumbersArray[i]}, " : $"{taskSixRandomNumbersArray[i]}";
+                        Console.Write(result);
                         evenNumbersQuantity++;
                     }
                 }
                 Console.WriteLine($"\nEven numbers quantity in Array: {evenNumbersQuantity}\n");
                 Console.WriteLine($"Odd numbers from Array in decremental order of indexes: ");
-                for (int i = taskSixRandomNumbersArray.Length - 1; i >=0; i--)
+                for (int i = taskSixRandomNumbersArrayLastIndex; i >=0; i--)
                 {
                     if (taskSixRandomNumbersArray[i] % 2 != 0)
                     {
-                        if (i != 0)
-                        {
-                            Console.Write($"{taskSixRandomNumbersArray[i]}, ");
-                        }
-                        else
-                        {
-                            Console.Write($"{taskSixRandomNumbersArray[i]}");
-                        }
+                        string result = (i != 0) ? $"{taskSixRandomNumbersArray[i]}, " : $"{taskSixRandomNumbersArray[i]}";
+                        Console.Write(result);
                         oddNumbersQuantity++;
                     }
                 }
@@ -225,9 +184,8 @@ namespace BAL.UIP.HW3.ArraysLoopsConditionalsMethods.ConsoleApp
                 {
                     taskSevenEvenVariableN = randomizer.Next(2, 50);
                 }
-                int[] taskSevenRandomNumbersArray = new int[taskSevenEvenVariableN];
-
-                taskSevenRandomNumbersArray = GetRandomNumbersArray(taskSevenEvenVariableN, -50, 50);
+                
+                int[] taskSevenRandomNumbersArray = GetRandomNumbersArray(taskSevenEvenVariableN, -50, 50);
 
                 Console.WriteLine($"Total size of Array: {taskSevenRandomNumbersArray.Length}\n");
                 Console.WriteLine($"Numbers with even index numbers from Array in incremental order of indexes: ");
@@ -299,21 +257,21 @@ namespace BAL.UIP.HW3.ArraysLoopsConditionalsMethods.ConsoleApp
             return secondBiggerNumber;
         }
 
-        static int GetNumberOfNumbersInRangeIncluding(int firstNumber, int secondNumber)
+        static int GetCountOfNumbersInRangeIncluding(int firstNumber, int secondNumber)
         {
-            int numberOfNumbers = Math.Abs(secondNumber - firstNumber + 1);
-            return numberOfNumbers;
+            int countOfNumbers = Math.Abs(secondNumber - firstNumber + 1);
+            return countOfNumbers;
         }
 
-        static int GetNumberOfNumbersInRangeExcluding(int firstNumber, int secondNumber)
+        static int GetCountOfNumbersInRangeExcluding(int firstNumber, int secondNumber)
         {
-            int numberOfNumbers = Math.Abs(secondNumber - firstNumber - 1);
-            return numberOfNumbers;
+            int countOfNumbers = Math.Abs(secondNumber - firstNumber - 1);
+            return countOfNumbers;
         }
 
-        static int[] GetAllNumbersInRangeIncreasing(int numberOfNumbers, int firstElementValue)
+        static int[] GetAllNumbersInRangeIncreasing(int countOfNumbers, int firstElementValue)
         {
-            int[] allNumbersInRange = new int[numberOfNumbers];
+            int[] allNumbersInRange = new int[countOfNumbers];
             for (int i = 0; i < allNumbersInRange.Length; i++)
             {
                 allNumbersInRange[i] = firstElementValue;
@@ -322,9 +280,9 @@ namespace BAL.UIP.HW3.ArraysLoopsConditionalsMethods.ConsoleApp
             return allNumbersInRange;
         }
 
-        static int[] GetAllNumbersInRangeDecreasing(int numberOfNumbers, int lastElementValue)
+        static int[] GetAllNumbersInRangeDecreasing(int countOfNumbers, int lastElementValue)
         {
-            int[] allNumbersInRange = new int[numberOfNumbers];
+            int[] allNumbersInRange = new int[countOfNumbers];
             for (int i = 0; i < allNumbersInRange.Length; i++)
             {
                 allNumbersInRange[i] = lastElementValue-1;
