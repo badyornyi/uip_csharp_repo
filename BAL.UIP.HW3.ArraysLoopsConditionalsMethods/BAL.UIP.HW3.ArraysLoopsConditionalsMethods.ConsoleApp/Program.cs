@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,7 @@ namespace BAL.UIP.HW3.ArraysLoopsConditionalsMethods.ConsoleApp
             // Вывести в порядке возрастания все целые числа,
             // расположенные между A и B (включая сами числа A и B),
             // а также количество N этих чисел.
-            if(true)
+            if(false)
             {
                 Console.WriteLine("Task 1.");
                 int taskOneVariableOne = randomizer.Next(-50, 49);
@@ -41,7 +42,7 @@ namespace BAL.UIP.HW3.ArraysLoopsConditionalsMethods.ConsoleApp
             // Вывести в порядке убывания все целые числа,
             // расположенные между A и B (не включая числа A и B),
             // а также количество N этих чисел.
-            if (true)
+            if (false)
             {
                 Console.WriteLine("Task 2.");
                 int taskTwoVariableOne = randomizer.Next(-50, 49);
@@ -71,7 +72,7 @@ namespace BAL.UIP.HW3.ArraysLoopsConditionalsMethods.ConsoleApp
             // По данному P определить, через сколько месяцев размер вклада превысит $1100,
             // и вывести найденное количество месяцев K (целое число)
             // и итоговый размер вклада S (вещественное число).
-            if (true)
+            if (false)
             {
                 Console.WriteLine("Task 3.");
                 int startMoneyAmount = 1000;
@@ -95,7 +96,7 @@ namespace BAL.UIP.HW3.ArraysLoopsConditionalsMethods.ConsoleApp
             // Task 4. Дано целое число N (> 0).
             // Сформировать и вывести целочисленный массив размера N,
             // содержащий N первых положительных нечетных чисел: 1, 3, 5, … .
-            if (true)
+            if (false)
             {
                 Console.WriteLine("Task 4.");
                 int taskFourVariableN = randomizer.Next(1, 50);
@@ -115,7 +116,7 @@ namespace BAL.UIP.HW3.ArraysLoopsConditionalsMethods.ConsoleApp
 
             // Task 5. Дан массив размера N.
             // Вывести его элементы в обратном порядке.
-            if (true)
+            if (false)
             {
                 Console.WriteLine("Task 5.");
                 int taskFiveVariableN = randomizer.Next(1, 50);
@@ -136,7 +137,7 @@ namespace BAL.UIP.HW3.ArraysLoopsConditionalsMethods.ConsoleApp
             // Вывести вначале все содержащиеся в данном массиве четные числа в порядке возрастания их индексов,
             // а затем — все нечетные числа в порядке убывания их индексов.
             // Также вывести количество четных и нечетных членов массива.
-            if (true)
+            if (false)
             {
                 Console.WriteLine("Task 6.");
                 int taskSixVariableN = randomizer.Next(1, 50);
@@ -176,7 +177,7 @@ namespace BAL.UIP.HW3.ArraysLoopsConditionalsMethods.ConsoleApp
             // Task 7. Дан массив A размера N (N — четное число).
             // Вывести его элементы с четными номерами в порядке возрастания номеров: A2, A4, A6, …, AN.
             // Условный оператор не использовать.
-            if (true)
+            if (false)
             {
                 Console.WriteLine("Task 7.");
                 int taskSevenEvenVariableN = randomizer.Next(2, 50);
@@ -201,38 +202,199 @@ namespace BAL.UIP.HW3.ArraysLoopsConditionalsMethods.ConsoleApp
 
             // Task 8. Дан целочисленный массив размера N.
             // Найти количество различных элементов в данном массиве.
-            //if (false)
-            //{
-            //    Console.WriteLine("Task 8.");
-            //    int taskElevenVariableN = randomizer.Next(10, 10);
-            //    int[] taskElevenRandomNumbersArray = new int[taskElevenVariableN];
-            //    int taskElevenQuantityOfDifferentValues = 0;
+            if (true)
+            {
+                Console.WriteLine("Task 8.");
+                int taskEightVariableN = randomizer.Next(10, 10);
+                int taskEightQuantityOfSameValues = 0;
 
-            //    taskElevenRandomNumbersArray = GetRandomNumbersArray(taskElevenVariableN, 0, 10);
+                int[] taskEightRandomNumbersArray = GetRandomNumbersArray(taskEightVariableN, 0, 10);
+                Console.WriteLine($"Given Array:");
+                for (int i = 0; i < taskEightRandomNumbersArray.Length; i++)
+                {
+                    Console.Write($"{taskEightRandomNumbersArray[i]}, ");
+                }
+                
+                for (int i = 0; i < taskEightRandomNumbersArray.Length; i++)
+                {
+                    for (int j = i + 1; j < taskEightRandomNumbersArray.Length; j++)
+                    {
+                        if (taskEightRandomNumbersArray[j] == taskEightRandomNumbersArray[i])
+                        {
+                            taskEightQuantityOfSameValues++;
+                            break;
+                        }
+                    }
+                }
+                int taskEightQuantityOfUniqueValues = taskEightRandomNumbersArray.Length - taskEightQuantityOfSameValues;
 
-            //    for (int i = 0; i < taskElevenRandomNumbersArray.Length; i++)
-            //    {
-            //        Console.Write($"{taskElevenRandomNumbersArray[i]}, ");
-            //    }
+                Console.WriteLine($"\nQuantity of different values in Array: {taskEightQuantityOfUniqueValues}\n");
+            }
 
-            //    for (int i = 0; i < taskElevenRandomNumbersArray.Length; i++)
-            //    {
-            //        for (int j = 0; j < taskElevenRandomNumbersArray.Length; j++)
-            //        {
-            //            if (i < j)
-            //            {
-            //                if (taskElevenRandomNumbersArray[i] == taskElevenRandomNumbersArray[j])
-            //                {
-            //                    taskElevenQuantityOfDifferentValues++;
-            //                }
-            //            }
-            //        }
-            //    }
-            //    Console.WriteLine($"\nQuantity of different values in Array: {taskElevenQuantityOfDifferentValues}\n");
 
-            //}
+            // Task 9. Дано целое число N (> 0).
+            // Найти произведение N! = 1·2·…·N (N–факториал).
+            // Чтобы избежать целочисленного переполнения, вычислять это произведение с помощью вещественной переменной
+            // и вывести его как вещественное число. Использовать рекурсию.
+            if (true)
+            {
+                Console.WriteLine("Task 9.");
+                int taskNineVariableN = randomizer.Next(1, 50);
+
+                double nFactorial = GetFactorialForNumber(taskNineVariableN);
+
+                Console.WriteLine($"{taskNineVariableN}! = {nFactorial}");
+                Console.WriteLine("\n");
+            }
+
+
+            // Task 10. Написать метод, который считает и выводит на консоль последовательность Фибоначчи
+            // (число элементов в последовательности принимается, как входящий параметр), используя рекурсию.
+            if (true)
+            {
+                Console.WriteLine("Task 10.");
+                int taskTenVariableN = randomizer.Next(3, 23);
+                int firstNumber = 0;
+                int secondNumber = 1;
+                int sequencePosition = 1;
+
+                Console.WriteLine($"Fibonacci sequence for {taskTenVariableN} numbers:");
+                WriteFibonacciSequenceForN(firstNumber, secondNumber, sequencePosition, taskTenVariableN);
+
+                Console.WriteLine("\n");
+            }
+
+
+            // Task 11. Создать метод вычисляющий количество дней в месяце определённого года
+            // (с учётом високосности года)
+            if (true)
+            {
+                Console.WriteLine("Task 11.");
+                int taskElevenYear = randomizer.Next(1, 2030);
+                int taskElevenMonth = randomizer.Next(1, 12);
+
+                int daysInMonthForYear = GetDaysCountInMonthForYear(taskElevenMonth, taskElevenYear);
+
+                Console.WriteLine($"There are {daysInMonthForYear} days in №{taskElevenMonth} month for {taskElevenYear} year");
+                Console.WriteLine("\n");
+            }
+
+
+            // Task 12. Дан массив размера N.
+            // Обнулить элементы массива, расположенные между его минимальным и максимальным элементами
+            // (не включая минимальный и максимальный элементы).
+            if (true)
+            {
+                Console.WriteLine("Task 12.");
+                int taskTwelveVariableN = randomizer.Next(1, 50);
+
+                int[] taskTwelveRandomNumbersArray = GetRandomNumbersArray(taskTwelveVariableN, 0, 50);
+
+                Console.WriteLine($"Given Array:");
+                WriteSingleArrayToConsole(taskTwelveRandomNumbersArray);
+                
+                int minValueIndex = GetArrayElementFirstIndexByValue(taskTwelveRandomNumbersArray.Min(), taskTwelveRandomNumbersArray);
+                int maxValueIndex = GetArrayElementFirstIndexByValue(taskTwelveRandomNumbersArray.Max(), taskTwelveRandomNumbersArray);
+
+                int startElementIndex = minValueIndex < maxValueIndex ? minValueIndex : maxValueIndex;
+                int endElementIndex = minValueIndex < maxValueIndex ? maxValueIndex : minValueIndex;
+
+                for (int i = startElementIndex + 1; i < endElementIndex; i++)
+                {
+                    taskTwelveRandomNumbersArray[i] = 0;
+                }
+
+                Console.WriteLine($"Result Array:");
+                WriteSingleArrayToConsole(taskTwelveRandomNumbersArray);
+                Console.WriteLine("\n");
+            }
+
+
+            // Task 13. Создайте массив N (случайноe число от 1 до 10)
+            // с массивами длинной М (случайноe число от 20 до 50).
+            // Заполните его случайными целыми числами от 0 до 9.
+            // Выведите массив на экран.
+            // Отсортируйте каждую строку массива, по возрастанию.
+            // Выведите преобразованный массив на экран.
+            if (true)
+            {
+                Console.WriteLine("Task 13.");
+                int task13VarN = randomizer.Next(1, 10);
+                int task13VarM = randomizer.Next(20, 50);
+                Console.WriteLine($"Array size: [{task13VarN}][{task13VarM}]");
+
+                int[][] task13RandomNumbersJaggedArray = GetRandomNumbersJaggedArray(task13VarN, task13VarM);
+
+                Console.WriteLine($"Given Array:");
+                WriteJaggedArrayToConsole(task13RandomNumbersJaggedArray);
+
+                for (int i = 0; i < task13RandomNumbersJaggedArray.Length; i++)
+                {
+                    Array.Sort(task13RandomNumbersJaggedArray[i]);
+                }
+
+                Console.WriteLine($"Result Array:");
+                WriteJaggedArrayToConsole(task13RandomNumbersJaggedArray);
+                Console.WriteLine("\n");
+            }
 
             /* ========== End of Part 2 Main ========== */
+            /* ========== Start of Part 3 Main ======== */
+
+            // Task 14.
+            if (false)
+            {
+                Console.WriteLine("Task 14.");
+
+                Console.WriteLine("\n");
+            }
+
+
+            // Task 15.
+            if (false)
+            {
+                Console.WriteLine("Task 15.");
+
+                Console.WriteLine("\n");
+            }
+
+
+            // Task 16.
+            if (false)
+            {
+                Console.WriteLine("Task 16.");
+
+                Console.WriteLine("\n");
+            }
+
+
+            // Task 17.
+            if (false)
+            {
+                Console.WriteLine("Task 17.");
+
+                Console.WriteLine("\n");
+            }
+
+
+            // Task 18.
+            if (false)
+            {
+                Console.WriteLine("Task 18.");
+
+                Console.WriteLine("\n");
+            }
+
+
+            // Task 19.
+            if (false)
+            {
+                Console.WriteLine("Task 19.");
+
+                Console.WriteLine("\n");
+            }
+
+            /* ========== End of Part 3 Main ========== */
             Console.ReadLine();
         }
 
@@ -245,6 +407,15 @@ namespace BAL.UIP.HW3.ArraysLoopsConditionalsMethods.ConsoleApp
         //    randomNumber = randomizer.Next(randomFrom, randomTo);
         //    return randomNumber;
         //}
+
+        static void WriteSingleArrayToConsole(int[] array)
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.Write($"{array[i]}, ");
+            }
+            Console.WriteLine();
+        }
 
         static int GetBiggerSecondNumber(int firstLesserNumber)
         {
@@ -320,5 +491,143 @@ namespace BAL.UIP.HW3.ArraysLoopsConditionalsMethods.ConsoleApp
 
         /* ========== End of Part 1 Methods ======= */
         /* ========== Start of Part 2 Methods ===== */
+
+        static double GetFactorialForNumber(int number)
+        {
+            double factorial;
+
+            factorial = number == 1 ? 1 : factorial = number * GetFactorialForNumber(number - 1);
+
+            return factorial;
+        }
+
+        static void WriteFibonacciSequenceForN(int firstNumber, int secondNumber, int sequencePosition, int sequenceLenght)
+        {
+            int temp = 0;
+
+            if(sequencePosition <= sequenceLenght)
+            {
+                string result = (sequencePosition != sequenceLenght) ? $"{firstNumber}, " : $"{firstNumber}";
+                Console.Write(result);
+                temp = firstNumber;
+                firstNumber = secondNumber;
+                secondNumber = firstNumber + temp;
+                sequencePosition++;
+                WriteFibonacciSequenceForN(firstNumber, secondNumber, sequencePosition, sequenceLenght);
+            }
+        }
+
+        static int GetDaysCountInMonthForYear(int month, int year)
+        {
+            bool isYearLeap = IsYearLeap(year);
+            int daysCountInMonthForYear = 0;
+
+            switch (month)
+            {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    {
+                        daysCountInMonthForYear = 31;
+                        break;
+                    }
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    {
+                        daysCountInMonthForYear = 30;
+                        break;
+                    }
+                case 2:
+                    {
+                        daysCountInMonthForYear = isYearLeap ? 29 : 28;
+                        break;
+                    }
+                default:
+                    {
+                        Console.WriteLine("Wrong Month number");
+                        break;
+                    }
+            }
+
+            return daysCountInMonthForYear;
+        }
+
+        static bool IsYearLeap(int year)
+        {
+            bool isYearLeap = false;
+
+            bool isYearCentury = year % 100 == 0;
+
+            if (isYearCentury && (year % 400 == 0))
+            {
+                isYearLeap = true;
+            }
+            else if (!isYearCentury && (year % 4 == 0))
+            {
+                isYearLeap = true;
+            }
+            else
+            {
+                isYearLeap = false;
+            }
+            //Console.WriteLine($"Year {year} leap? {isYearLeap}");
+
+            return isYearLeap;
+        }
+
+        static int GetArrayElementFirstIndexByValue(int value, int[] array)
+        {
+            int valueIndex = 0;
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] == value)
+                {
+                    valueIndex = i;
+                    break;
+                }
+            }
+            return valueIndex;
+        }
+
+        static int[][] GetRandomNumbersJaggedArray(int firstDimensionLenght, int secondDimensionLenght)
+        {
+            int[][] jaggedArray = new int[firstDimensionLenght][];
+            Random randomizer = new Random();
+
+            for (int i = 0; i < firstDimensionLenght; i++)
+            {
+                jaggedArray[i] = new int[secondDimensionLenght];
+                for (int j = 0; j < secondDimensionLenght; j++)
+                {
+                    jaggedArray[i][j] = randomizer.Next(0, 9);
+                }
+
+            }
+            return jaggedArray;
+        }
+
+        static void WriteJaggedArrayToConsole(int[][] jaggedArray)
+        {
+            for (int i = 0; i < jaggedArray.Length; i++)
+            {
+                for (int j = 0; j < jaggedArray[i].Length; j++)
+                {
+                    Console.Write($"{jaggedArray[i][j]} ");
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+        }
+
+        /* ========== End of Part 2 Methods ======= */
+        /* ========== Start of Part 3 Methods ===== */
+
+
     }
 }
