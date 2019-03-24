@@ -337,56 +337,117 @@ namespace BAL.UIP.HW3.ArraysLoopsConditionalsMethods.ConsoleApp
                 WriteJaggedArrayToConsole(task13RandomNumbersJaggedArray);
                 Console.WriteLine("\n");
             }
+            
+            
+            // Task 14. Учитель задаёт каждому ученику пример из таблицы умножения.
+            // В классе 15 человек, примеры среди них не должны повторяться.
+            // Напишите программу/метод, которая будет выводить на экран
+            // 15 случайных примеров из таблицы умножения (от 2*2 до 9*9).
+            // При этом среди 15 примеров не должно быть повторяющихся
+            // (примеры 2*3 и 3*2 и им подобные пары считать повторяющимися).
+            if (true)
+            {
+                Console.WriteLine("Task 14.");
+                int task14StudentsCount = 15;
+
+                string[] task14ExamplesArray = new string[task14StudentsCount];
+                
+                for (int i = 0; i < task14ExamplesArray.Length; i++)
+                {
+                    string task14Example = "";
+                    do
+                    {
+                        string task14FirstNumber = randomizer.Next(2, 9).ToString();
+                        string task14SecondNumber = randomizer.Next(2, 9).ToString();
+                        task14Example = task14FirstNumber + " * " + task14SecondNumber;
+                    } while (IsThisStringInArray(task14Example, task14ExamplesArray));
+                    task14ExamplesArray[i] = task14Example;
+                }
+
+                Console.WriteLine("Exapmles for Class:");
+                WriteSingleArrayToConsoleWithCarriage(task14ExamplesArray);
+                Console.WriteLine("\n");
+            }
+
+
+            // Task 15. Создать метод проверяющий,
+            // что у переданного числа первая цифра равна последней
+            if (true)
+            {
+                Console.WriteLine("Task 15.");
+                int task15Number = randomizer.Next(10, 1000);
+
+                string task15Result = IsFirstAndLastDigitsAreEqual(task15Number) ? "are" : "are not";
+
+                Console.WriteLine($"First and last digit of {task15Number} {task15Result} equal");
+                Console.WriteLine("\n");
+            }
+
+
+            // Task 16. Путешественник проходит каждый день несколько километров.
+            // Создать метод, выводящий на экран его путь с начала путешествия
+            // (в виде "День №1 : 10км; День №2 : 7км; День №3 : 13км; ").
+            // Метод должен работать для любого количества дней путешествия.
+            if (true)
+            {
+                Console.WriteLine("Task 16.");
+                int task16DaysCount = randomizer.Next(1, 50);
+
+                WriteTravelDistancePerDay(task16DaysCount);
+
+                Console.WriteLine("\n");
+            }
+
+
+            // Task 17. Создать метод, возвращающий true,
+            // если заданное число находится "повсюду" в целочисленном массиве.
+            // Под "повсюду" подразумевается, что при рассмотрении любой пары рядом стоящих элементов массива,
+            // одним из элементов будет искомое число, т.е.
+            // isEverywhere({ 1, 2, 1, 3}, 1) → true
+            // isEverywhere({ 1, 2, 1, 3}, 2) → false
+            // isEverywhere({ 1, 2, 1, 3, 4}, 1) → false
+            if (true)
+            {
+                Console.WriteLine("Task 17.");
+                int task17GivenNumber = randomizer.Next(1, 3);
+                int task17ArrayLenght = randomizer.Next(5, 5);
+                int[] task17NumbersArray = GetRandomNumbersArray(task17ArrayLenght, 1, 3);
+
+                Console.WriteLine($"Given Array:");
+                WriteSingleArrayToConsole(task17NumbersArray);
+
+                string task17Result = IsArrayElementEverywhereInArray(task17GivenNumber, task17NumbersArray) ? "is" : "is not";
+
+                Console.WriteLine($"Number {task17GivenNumber} {task17Result} everywhere in given array");
+                Console.WriteLine("\n");
+            }
+
+
+            // Task 18. Создать метод, проверяющий, может ли массив быть "сбалансированным",
+            // т.е. разделённым на две части в каком-то месте, таким образом,
+            // чтобы сумма элементов одной части равнялась сумме элементов второй. Т.е.
+            // { 1, 1, 1, 2, 1 }; // true
+            // { 1, 2, 3, 1, 0, 1, 3 }; // false
+            // { 1, 1, 1, 1, 4 }; // true
+            if (true)
+            {
+                Console.WriteLine("Task 18.");
+                int task18ArrayLenght = randomizer.Next(5, 5);
+                int[] task18NumbersArray = GetRandomNumbersArray(task18ArrayLenght, 1, 3);
+
+                Console.WriteLine($"Given Array:");
+                WriteSingleArrayToConsole(task18NumbersArray);
+
+                string task18Result = IsArrayCanBeBalanced(task18NumbersArray) ? "can" : "can not";
+
+                Console.WriteLine($"Given array {task18Result} be balanced");
+                Console.WriteLine("\n");
+            }
 
             /* ========== End of Part 2 Main ========== */
             /* ========== Start of Part 3 Main ======== */
 
-            // Task 14.
-            if (false)
-            {
-                Console.WriteLine("Task 14.");
-
-                Console.WriteLine("\n");
-            }
-
-
-            // Task 15.
-            if (false)
-            {
-                Console.WriteLine("Task 15.");
-
-                Console.WriteLine("\n");
-            }
-
-
-            // Task 16.
-            if (false)
-            {
-                Console.WriteLine("Task 16.");
-
-                Console.WriteLine("\n");
-            }
-
-
-            // Task 17.
-            if (false)
-            {
-                Console.WriteLine("Task 17.");
-
-                Console.WriteLine("\n");
-            }
-
-
-            // Task 18.
-            if (false)
-            {
-                Console.WriteLine("Task 18.");
-
-                Console.WriteLine("\n");
-            }
-
-
-            // Task 19.
+            // Task 19. Реализовать метод быстрой сортировки одномерного массива с помощью рекурсивного метода.
             if (false)
             {
                 Console.WriteLine("Task 19.");
@@ -413,6 +474,16 @@ namespace BAL.UIP.HW3.ArraysLoopsConditionalsMethods.ConsoleApp
             for (int i = 0; i < array.Length; i++)
             {
                 Console.Write($"{array[i]}, ");
+            }
+            Console.WriteLine();
+        }
+
+        static void WriteSingleArrayToConsoleWithCarriage(string[] array)
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                string result = (i < 9) ? $" {i + 1}" : $"{i + 1}";
+                Console.WriteLine($"{result}. {array[i]}");
             }
             Console.WriteLine();
         }
@@ -625,9 +696,92 @@ namespace BAL.UIP.HW3.ArraysLoopsConditionalsMethods.ConsoleApp
             Console.WriteLine();
         }
 
+        static string GetStringReversed(string item)
+        {
+            char[] reverseItemCharArray = item.ToCharArray();
+            Array.Reverse(reverseItemCharArray);
+            string reverseItem = new string(reverseItemCharArray);
+            return reverseItem;
+        }
+
+        static bool IsFirstAndLastDigitsAreEqual(int number)
+        {
+            string numberString = number.ToString();
+            string reversedTask15Number = GetStringReversed(numberString);
+            bool areEqual = numberString.ToCharArray()[0].ToString() == reversedTask15Number.ToCharArray()[0].ToString();
+            return areEqual;
+        }
+
+        static bool IsThisStringInArray(string item, string[] array)
+        {
+            bool isPresent = true;
+            string reversedItem = GetStringReversed(item);
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                isPresent = (item != array[i] && reversedItem != array[i]) ? false : true;
+                if (isPresent)
+                {
+                    return isPresent;
+                }
+            }
+            return isPresent;
+        }
+
+        static void WriteTravelDistancePerDay(int daysCount)
+        {
+            Random randomizer = new Random();
+            for (int i = 1; i <= daysCount; i++)
+            {
+                int todayDistance = randomizer.Next(1, 10);
+                Console.Write($"Day №{i}: {todayDistance}km; ");
+            }
+            Console.WriteLine();
+        }
+
+        static bool IsArrayElementEverywhereInArray(int number, int[] array)
+        {
+            bool isEverywhere = false;
+
+            for (int i = 0; i < array.Length - 1; i++)
+            {
+                isEverywhere = (array[i] == number || array[i + 1] == number);
+                if (!isEverywhere)
+                {
+                    return isEverywhere;
+                }
+
+            }
+            return isEverywhere;
+        }
+
+        private static bool IsArrayCanBeBalanced(int[] array)
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                int leftPart = 0;
+                int rightPart = 0;
+
+                for (int j = 0; j < i; j++)
+                {
+                    leftPart = leftPart + array[j];
+                }
+
+                for (int j = i; j < array.Length; j++)
+                {
+                    rightPart = rightPart + array[j];
+                }
+
+                if (leftPart == rightPart)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         /* ========== End of Part 2 Methods ======= */
         /* ========== Start of Part 3 Methods ===== */
-
 
     }
 }
