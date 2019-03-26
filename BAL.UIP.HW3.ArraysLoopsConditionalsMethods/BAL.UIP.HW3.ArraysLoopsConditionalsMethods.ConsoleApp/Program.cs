@@ -444,18 +444,51 @@ namespace BAL.UIP.HW3.ArraysLoopsConditionalsMethods.ConsoleApp
                 Console.WriteLine("\n");
             }
 
-            /* ========== End of Part 2 Main ========== */
-            /* ========== Start of Part 3 Main ======== */
-
+            
             // Task 19. Реализовать метод быстрой сортировки одномерного массива с помощью рекурсивного метода.
-            if (false)
+            if (true)
             {
                 Console.WriteLine("Task 19.");
+                int task19ArrayLength = randomizer.Next(5, 20);
 
+                if (false)
+                {
+                    //int[] task19SortedArray = new int[task19ArrayLength];
+                    //WriteSingleArrayToConsole(task19GivenArray);
+
+                    //int maxValue = task19GivenArray.Max() + 1;
+
+                    //for (int i = 0; i < task19SortedArray.Length; i++)
+                    //{
+                    //    int tempMinValue = 0;
+
+                    //    for (int j = 0; j < task19GivenArray.Length; j++)
+                    //    {
+                    //        if (task19GivenArray[j] == task19GivenArray.Min())
+                    //        {
+                    //            tempMinValue = task19GivenArray[j];
+                    //            task19GivenArray[j] = maxValue;
+                    //            break;
+                    //        }
+                    //    }
+
+                    //    task19SortedArray[i] = tempMinValue;
+                    //}
+
+                    //WriteSingleArrayToConsole(task19SortedArray);
+                }
+
+                int[] task19GivenArray = GetRandomNumbersArray(task19ArrayLength, 0, 50);
+                //int[] task19GivenArray = new int[] {3, 6, 5, 8, 2, 9, 0, 7, 1, 4};
+                WriteSingleArrayToConsole(task19GivenArray);
+
+                QuickSortRecurcive(task19GivenArray, 0, task19ArrayLength - 1);
+
+                WriteSingleArrayToConsole(task19GivenArray);
                 Console.WriteLine("\n");
             }
 
-            /* ========== End of Part 3 Main ========== */
+            /* ========== End of Part 2 Main ========== */
             Console.ReadLine();
         }
 
@@ -780,8 +813,39 @@ namespace BAL.UIP.HW3.ArraysLoopsConditionalsMethods.ConsoleApp
             return false;
         }
 
-        /* ========== End of Part 2 Methods ======= */
-        /* ========== Start of Part 3 Methods ===== */
+        static int QuickSortPartition(int[] array, int startIndex, int endIndex)
+        {
+            int temp;
+            int pivot = startIndex;
 
+            for (int i = startIndex; i <= endIndex; i++)
+            {
+                if (array[i] < array[endIndex])
+                {
+                    temp = array[pivot];
+                    array[pivot] = array[i];
+                    array[i] = temp;
+                    pivot += 1;
+                }
+            }
+
+            temp = array[pivot];
+            array[pivot] = array[endIndex];
+            array[endIndex] = temp;
+            return pivot;
+        }
+
+        static void QuickSortRecurcive(int[] array, int startIndex, int endIndex)
+        {
+            if (startIndex >= endIndex)
+            {
+                return;
+            }
+            int pivot = QuickSortPartition(array, startIndex, endIndex);
+            QuickSortRecurcive(array, startIndex, pivot - 1);
+            QuickSortRecurcive(array, pivot + 1, endIndex);
+        }
+
+        /* ========== End of Part 2 Methods ======= */
     }
 }
