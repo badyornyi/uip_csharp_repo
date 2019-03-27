@@ -294,7 +294,7 @@ namespace BAL.UIP.FirstClass.FirstApp.ConsoleApp
                 human2.SayHello();
             }
 
-            if (true)
+            if (false)
             {
                 MobilePhoneShop Shop01 = new MobilePhoneShop("My Shop", "Kyiv", 5);
 
@@ -531,6 +531,7 @@ namespace BAL.UIP.FirstClass.FirstApp.ConsoleApp
                 {
                     warehouse.AddPhone(mobilePhones[0]);
                 }
+                break;
             }
         }
     }
