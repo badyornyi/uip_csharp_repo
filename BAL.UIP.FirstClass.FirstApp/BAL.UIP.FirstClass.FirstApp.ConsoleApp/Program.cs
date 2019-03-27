@@ -244,7 +244,7 @@ namespace BAL.UIP.FirstClass.FirstApp.ConsoleApp
                 PrintArray(arrayValuesFromUser);
             }
 
-            if (true)
+            if (false)
             {
                 bool isExitReauired = false;
                 do
@@ -273,6 +273,38 @@ namespace BAL.UIP.FirstClass.FirstApp.ConsoleApp
                     }
 
                 } while (isExitReauired);
+            }
+
+            // Class 4: Classes
+
+            if (false)
+            {
+                Human human1 = new Human("Alexus", 20, "M");
+                Human human2 = new Human("Alice", 19, "F");
+
+                human1.Name = "Ale";
+                //human1.Age = 20;
+                human1.Sex = "X";
+
+                human2.Name = "Alice";
+                //human2.Age = 19;
+                human2.Sex = "F";
+
+                human1.SayHello();
+                human2.SayHello();
+            }
+
+            if (true)
+            {
+                MobilePhoneShop Shop01 = new MobilePhoneShop("My Shop", "Kyiv", 5);
+
+                MobilePhone[] mobilePhones = new MobilePhone[]
+                {
+                    new MobilePhone("nokia"),
+                    new MobilePhone("siemens")
+                };
+
+                Shop01.ReceivePhones(mobilePhones);
             }
 
             Console.ReadLine();
@@ -408,4 +440,150 @@ namespace BAL.UIP.FirstClass.FirstApp.ConsoleApp
             PrintArray(arrayValuesFromUser);
         }
     }
+
+    // Class 4: Classes
+
+    public class Human
+    {
+        public Human(string name, int age, string sex)
+        {
+            this.Name = name;
+            this.Age = age;
+            this.Sex = sex;
+        }
+
+        private string _Name;
+        public string Name
+        {
+            get
+            {
+                return this._Name;
+            }
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value) || value.Length < 5)
+                {
+                    return;
+                }
+                this._Name = value;
+            }
+        }
+
+        public int Age { get; }
+
+        private string _Sex;
+        public string Sex
+        {
+            get
+            {
+                return this._Sex;
+            }
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value) || value != "M" && value != "F")
+                {
+                    return;
+                }
+                this._Sex = value;
+            }
+        }
+
+        public void SayHello()
+        {
+            Console.WriteLine($"Hi! My name is {this.Name}");
+        }
+    }
+
+    public class MobilePhoneShop
+    {
+        public string Name { get; set; }
+        public string Addsress { get; set; }
+        public Warehouse[] Warehouses { get; set; }
+
+        public MobilePhoneShop(string name, string address, int warehousesCount)
+        {
+            this.Name = name;
+            this.Addsress = address;
+            this.Warehouses = new Warehouse[warehousesCount];
+
+            InitializeWarehouses();
+        }
+
+        private void InitializeWarehouses()
+        {
+            for (int i = 0; i < this.Warehouses.Length; i++)
+            {
+                this.Warehouses[i] = new Warehouse("Polivaya" + i + 1, (i + 1) * 10);
+            }
+        }
+
+        public void ReceivePhones(MobilePhone[] mobilePhones)
+        {
+            if (mobilePhones == null || mobilePhones.Length == 0)
+            {
+                Console.WriteLine("No phones were delivered.");
+                return;
+            }
+
+            foreach (var warehouse in this.Warehouses)
+            {
+                if (!warehouse.IsFull)
+                {
+                    warehouse.AddPhone(mobilePhones[0]);
+                }
+            }
+        }
+    }
+
+    public class Warehouse
+    {
+        public MobilePhone[] MobilePhones { get; set; }
+        public bool IsFull
+        {
+            get
+            {
+                foreach (var mobilePhone in MobilePhones)
+                {
+                    if (mobilePhone == null)
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
+        }
+        public string Address { get; set; }
+
+        public Warehouse(string address, int warehouseСapacity)
+        {
+            this.Address = address;
+            this.MobilePhones = new MobilePhone[warehouseСapacity];
+        }
+
+        public void AddPhone(MobilePhone mobilePhone)
+        {
+            for (int i = 0; i < MobilePhones.Length; i++)
+            {
+                if (MobilePhones[i] == null)
+                {
+                    MobilePhones[i] = mobilePhone;
+                    break;
+                }
+            }
+        }
+    }
+
+    public class MobilePhone
+    {
+        public string ProducerBy { get; set; }
+        public string Model { get; set; }
+        public int Price { get; set; }
+        public DateTime ProducedAt { get; set; }
+
+        public MobilePhone(string model)
+        {
+            this.Model = model;
+        }
+    }
+
 }
