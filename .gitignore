@@ -5,6 +5,8 @@
 # ignore obj folders content
 BAL.UIP*/BAL.UIP*/obj/Debug/**
 BAL.UIP*/BAL.UIP*/bin/Debug/**
+**/obj/Debug/**
+**/bin/Debug/**
 
 # ignore cache/vs content
 *.suo
