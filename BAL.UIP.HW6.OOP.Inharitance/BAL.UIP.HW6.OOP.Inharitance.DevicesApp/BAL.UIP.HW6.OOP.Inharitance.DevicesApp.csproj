@@ -43,8 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComputerDevice.cs" />
+    <Compile Include="Device.cs" />
+    <Compile Include="ELTTVSetDevice.cs" />
+    <Compile Include="LaptopComputerDevice.cs" />
+    <Compile Include="PlayerDevice.cs" />
+    <Compile Include="PlazmaTVSetDevice.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServerComputerDevice.cs" />
+    <Compile Include="TVSetDevice.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
