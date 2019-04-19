@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BAL.UIP.HW7.LandCalculator.LandCalculatorApp", "BAL.UIP.HW7.LandCalculator.LandCalculatorApp\BAL.UIP.HW7.LandCalculator.LandCalculatorApp.csproj", "{C397CFB0-27A5-49E8-87A4-23616A707503}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C397CFB0-27A5-49E8-87A4-23616A707503}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C397CFB0-27A5-49E8-87A4-23616A707503}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C397CFB0-27A5-49E8-87A4-23616A707503}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C397CFB0-27A5-49E8-87A4-23616A707503}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F44BC624-900B-49EA-AF33-8C984E538896}
+	EndGlobalSection
+EndGlobal
