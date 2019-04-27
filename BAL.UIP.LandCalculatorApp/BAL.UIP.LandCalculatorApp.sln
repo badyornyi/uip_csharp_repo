@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{036B1B3A-CA1C-48F8-9AC4-B6D90978F8FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BLL", "BLL", "{E874C155-62FF-43A2-A0B8-885CDD4601DB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{5DF8D53B-C534-45E6-B6B0-7A3C19814BB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BAL.UIP.LandCalculatorApp.ConsoleUI", "BAL.UIP.LandCalculatorApp.ConsoleUI\BAL.UIP.LandCalculatorApp.ConsoleUI.csproj", "{5FDA82DD-F06E-4947-AFE7-D512BD81171F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BAL.UIP.LandCalculatorApp.DAL", "BAL.UIP.LandCalculatorApp.DAL\BAL.UIP.LandCalculatorApp.DAL.csproj", "{3ABDB7AB-F1C6-4DC4-8FA4-2A17632C33E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BAL.UIP.LandCalculatorApp.BLL", "BAL.UIP.LandCalculatorApp.BLL\BAL.UIP.LandCalculatorApp.BLL.csproj", "{112EF3F6-0F05-41F3-8D7F-DA9A0BA4D525}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{A6AE1C0F-DC83-4FCD-8DB3-CD819732BA80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BAL.UIP.LandCalculatorApp.Shared", "BAL.UIP.LandCalculatorApp.Shared\BAL.UIP.LandCalculatorApp.Shared.csproj", "{EA4B9158-900D-4D7C-9B9A-5B3BDD1E026A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5FDA82DD-F06E-4947-AFE7-D512BD81171F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FDA82DD-F06E-4947-AFE7-D512BD81171F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FDA82DD-F06E-4947-AFE7-D512BD81171F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FDA82DD-F06E-4947-AFE7-D512BD81171F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3ABDB7AB-F1C6-4DC4-8FA4-2A17632C33E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ABDB7AB-F1C6-4DC4-8FA4-2A17632C33E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ABDB7AB-F1C6-4DC4-8FA4-2A17632C33E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ABDB7AB-F1C6-4DC4-8FA4-2A17632C33E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{112EF3F6-0F05-41F3-8D7F-DA9A0BA4D525}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{112EF3F6-0F05-41F3-8D7F-DA9A0BA4D525}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{112EF3F6-0F05-41F3-8D7F-DA9A0BA4D525}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{112EF3F6-0F05-41F3-8D7F-DA9A0BA4D525}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA4B9158-900D-4D7C-9B9A-5B3BDD1E026A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA4B9158-900D-4D7C-9B9A-5B3BDD1E026A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA4B9158-900D-4D7C-9B9A-5B3BDD1E026A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA4B9158-900D-4D7C-9B9A-5B3BDD1E026A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5FDA82DD-F06E-4947-AFE7-D512BD81171F} = {036B1B3A-CA1C-48F8-9AC4-B6D90978F8FC}
+		{3ABDB7AB-F1C6-4DC4-8FA4-2A17632C33E6} = {5DF8D53B-C534-45E6-B6B0-7A3C19814BB6}
+		{112EF3F6-0F05-41F3-8D7F-DA9A0BA4D525} = {E874C155-62FF-43A2-A0B8-885CDD4601DB}
+		{EA4B9158-900D-4D7C-9B9A-5B3BDD1E026A} = {A6AE1C0F-DC83-4FCD-8DB3-CD819732BA80}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1FBC9291-C395-4733-9FDC-25589029158F}
+	EndGlobalSection
+EndGlobal
