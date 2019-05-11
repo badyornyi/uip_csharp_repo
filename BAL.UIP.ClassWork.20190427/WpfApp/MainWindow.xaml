@@ -1,0 +1,22 @@
+﻿<Window xmlns:Controls="clr-namespace:WpfApp.Controls"  x:Class="WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel HorizontalAlignment="Left">
+        <!--<Label Background="Aquamarine">Name:</Label>
+        <TextBox x:Name="UserName_TextBox" GotFocus="UserName_TextBox_GotFocus">Write Name Here</TextBox>
+        <Label>Address:</Label>
+        <TextBox x:Name="Address_TextBox">Write Address Here</TextBox>
+        <Label>Password:</Label>
+        <PasswordBox x:Name="Password_PasswordBox"></PasswordBox>
+        <Button Click="Button_Click">Submit</Button>-->
+        <Controls:PointView x:Name="P1"/>
+        <Controls:PointView x:Name="P2"/>
+        <Controls:PointView x:Name="P3"/>
+        <Button Click="Button_Click" Width="150">Calculate</Button>
+    </StackPanel>
+</Window>
